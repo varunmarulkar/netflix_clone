@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import HeroBg from '../assets/Herobg2.jpg'
+import bg from "../assets/Herobg2.jpg";
 import { Bookmark, Play } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
