@@ -19,7 +19,7 @@ export const useAuthStore = create((set) => ({
         set({ isLoading: true, message: null });
 
         try {
-            const response = await axios.post("http://localhost:5000/api/signup", {
+            const response = await axios.post("https://netflix-clone-ns2u.onrender.com/api/signup", {
                 username,
                 email,
                 password
@@ -39,7 +39,7 @@ export const useAuthStore = create((set) => ({
         set({ isLoading: true, message: null, error: null });
 
         try {
-            const response = await axios.post("http://localhost:5000/api/signin", {
+            const response = await axios.post("https://netflix-clone-ns2u.onrender.com/api/signin", {
                 username,
                 password
             })
@@ -56,7 +56,7 @@ export const useAuthStore = create((set) => ({
         set({ fetchingUser: true, error: null });
 
         try {
-            const response = await axios.get("http://localhost:5000/api/users",)
+            const response = await axios.get("https://netflix-clone-ns2u.onrender.com/api/users",)
             set({ user: response.data.user, fetchingUser: false })
         } catch (error) {
             set({ isLoading: false, error: null, user:null,fetchingUser:false})
@@ -68,7 +68,7 @@ export const useAuthStore = create((set) => ({
         set({ isLoading: true, error: null, message: null })
 
         try {
-            const response = await axios.post("http://localhost:5000/api/logout")
+            const response = await axios.post("https://netflix-clone-ns2u.onrender.com/api/logout")
             const { message } = response.data
             set({
                 message,
